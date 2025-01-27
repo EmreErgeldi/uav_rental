@@ -1,8 +1,10 @@
 Hello everybody, first of all this is not the full version so don't be hard on me :)
 
+I know, it is better to separate FE and BE but in this case study the requirements were like this
+
 You can test by just adding your DATABASE_URL(which is starting like postgresql:) to .env file
 
-pip intall -r requirements.txt
+pip install -r requirements.txt
 
 LOGIN Page
 ![image](https://github.com/user-attachments/assets/2fee42ab-cf93-4a78-8770-25893edd12f9)
