@@ -3,7 +3,7 @@ Hello everybody, first of all this is not the full version so don't hesistate me
 You can test by just adding your DATABASE_URL(which is starting like postgresql:) to .env file
 
 LOGIN Page
-![image](https://github.com/user-attachments/assets/3a161983-c939-463f-877e-e2077e046d42)
+![image](https://github.com/user-attachments/assets/2fee42ab-cf93-4a78-8770-25893edd12f9)
 
 After correct login List of parts page
 ![image](https://github.com/user-attachments/assets/14cf6e55-3115-4504-afc3-24fbf291c14b)
