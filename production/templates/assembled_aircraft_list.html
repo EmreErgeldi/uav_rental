@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Assembled Aircraft List</h2>
+
+<!-- Table for displaying assembled aircrafts -->
+<table id="aircraftTable" class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Parts Used</th>
+      <th>Assembly Date</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for aircraft in aircrafts %}
+    <tr>
+      <td>{{ aircraft.id }}</td>
+      <td>{{ aircraft.name }}</td>
+      <td>{{ aircraft.parts_used }}</td>
+      <td>{{ aircraft.assembly_date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% block extra_js %}
+<!-- Include jQuery and DataTables JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+<!-- Initialize DataTables -->
+<script>
+  $(document).ready(function () {
+    $("#aircraftTable").DataTable();
+  });
+</script>
+{% endblock %} {% endblock %}

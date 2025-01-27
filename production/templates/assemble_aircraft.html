@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Assemble Aircraft</h1>
+<form method="POST">
+  {% csrf_token %}
+  <label for="name">Aircraft Name:</label>
+  <input type="text" id="name" name="name" required /><br /><br />
+
+  <label for="wing">Select Wing:</label>
+  <select id="wing" name="wing" required>
+    {% for wing in wings %}
+    <option value="{{ wing.id }}">{{ wing.name }} ({{ wing.stock }} available)</option>
+    {% endfor %}</select
+  ><br /><br />
+
+  <label for="fuselage">Select Fuselage:</label>
+  <select id="fuselage" name="fuselage" required>
+    {% for fuselage in fuselages %}
+    <option value="{{ fuselage.id }}">{{ fuselage.name }} ({{ fuselage.stock }} available)</option>
+    {% endfor %}</select
+  ><br /><br />
+
+  <label for="tail">Select Tail:</label>
+  <select id="tail" name="tail" required>
+    {% for tail in tails %}
+    <option value="{{ tail.id }}">{{ tail.name }} ({{ tail.stock }} available)</option>
+    {% endfor %}</select
+  ><br /><br />
+
+  <label for="avionics">Select Avionics:</label>
+  <select id="avionics" name="avionics" required>
+    {% for avionics in avionics %}
+    <option value="{{ avionics.id }}">{{ avionics.name }} ({{ avionics.stock }} available)</option>
+    {% endfor %}</select
+  ><br /><br />
+
+  <button type="submit">Assemble Aircraft</button>
+</form>
+{% endblock %}

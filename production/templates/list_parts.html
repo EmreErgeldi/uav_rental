@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Parts List</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Quantity</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for part in parts %}
+    <tr>
+      <td>{{ part.id }}</td>
+      <td>{{ part.name }}</td>
+      <td>{{ part.type }}</td>
+      <td>{{ part.stock }}</td>
+      <td>
+        <a href="{% url 'delete_part' part.id %}" class="btn btn-danger">Recycle</a>
+        <!-- post request for update count with part.id -->
+        <form method="POST" action="{% url 'update_count' part.id %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-success">Add 1</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
