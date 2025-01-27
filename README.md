@@ -1,6 +1,7 @@
 Hello everybody, first of all this is not the full version so don't be hard on me :)
 
 You can test by just adding your DATABASE_URL(which is starting like postgresql:) to .env file
+
 pip intall -r requirements.txt
 
 LOGIN Page
